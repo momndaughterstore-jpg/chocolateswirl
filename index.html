@@ -555,7 +555,7 @@ async function analyzeThought(){
   document.getElementById('loading-text').textContent=msgs[Math.floor(Math.random()*msgs.length)];
   loading.classList.add('active');
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+    const resp=await fetch('/.netlify/functions/anthropic',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
       model:'claude-sonnet-4-20250514',max_tokens:1000,
       system:`You are the soul of Chocolate Swirl, a private mind portal for Suhasini. Raw stream-of-consciousness, no rules.\nRespond ONLY with valid JSON, no markdown:\n{"typeIndex":<0-5: 0=cosmic thread, 1=running dispatch, 2=golden window, 3=soft realization, 4=wild theory, 5=people study>,"reflection":"<2-3 sentences. warm, wise friend. no therapy-speak. gently mirror. a little poetic but not pretentious>","resonance":"<5-7 word lowercase poetic title like naming a painting>"}`,
       messages:[{role:'user',content:text}]
@@ -616,7 +616,7 @@ async function generateWhimsyIdeas(){
   const a=botState.answers;
   const prevStr=previousWhimsyIdeas.length?`\n\nDO NOT REPEAT ANY OF THESE:\n${previousWhimsyIdeas.map((g,i)=>`Set ${i+1}: ${g.join(' | ')}`).join('\n')}`:'';
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+    const resp=await fetch('/.netlify/functions/anthropic',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
       model:'claude-sonnet-4-20250514',max_tokens:700,
       system:'Generate whimsy ideas for Suhasini. Respond only with valid JSON, no markdown. Never repeat ideas from previous sets.',
       messages:[{role:'user',content:`Whimsy level: ${a.whimsy}\nLocation: ${a.where}\nCompany: ${a.who}\nDesired feeling: ${a.feeling}\n\n4 fresh specific whimsy ideas tailored to these. Micro-adventures, observation prompts, tiny acts. Warm, slightly poetic, unexpected. Not generic. 1-2 sentences each.${prevStr}\n\nRespond: {"ideas":["idea1","idea2","idea3","idea4"]}`}]
