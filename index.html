@@ -6,11 +6,7 @@
 <title>chocolate swirl ✦ Suhasini's mind</title>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --cream:#FDF6EC;--blush:#F2D4CE;--lavender:#E2D9F3;--mint:#D4EDE4;
-  --butter:#FFF0C4;--dusty-rose:#E8B4B8;--sage:#C4D9C8;
-  --chocolate:#6B4226;--warm-brown:#8B5E3C;--soft-ink:#3D2B1F;--gold:#C9A84C;
-}
+:root{--cream:#FDF6EC;--blush:#F2D4CE;--lavender:#E2D9F3;--mint:#D4EDE4;--butter:#FFF0C4;--dusty-rose:#E8B4B8;--sage:#C4D9C8;--chocolate:#6B4226;--warm-brown:#8B5E3C;--soft-ink:#3D2B1F;--gold:#C9A84C;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);font-family:'Caveat',cursive;color:var(--soft-ink);min-height:100vh;overflow-x:hidden;}
 #glitter-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;}
@@ -31,16 +27,12 @@ body{background:var(--cream);font-family:'Caveat',cursive;color:var(--soft-ink);
 .sticker:nth-child(even){transform:rotate(2deg);background:var(--lavender);}
 .sticker:nth-child(3n){transform:rotate(-1deg);background:var(--blush);}
 .sticker:hover{transform:rotate(0deg) scale(1.05);}
-
-/* WRITING */
 .writing-section{background:rgba(255,255,255,.62);border:1px solid rgba(201,168,76,.2);border-radius:16px;padding:2rem;margin:2rem 0;box-shadow:0 4px 28px rgba(107,66,38,.05),inset 0 1px 0 rgba(255,255,255,.8);position:relative;backdrop-filter:blur(8px);}
 .writing-section::before{content:'';position:absolute;top:10px;left:10px;right:10px;bottom:10px;border:1px dashed rgba(201,168,76,.17);border-radius:10px;pointer-events:none;}
 .writing-label{font-family:'Special Elite',monospace;font-size:.68rem;letter-spacing:.18em;color:var(--warm-brown);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
 .writing-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(107,66,38,.14),transparent);}
 textarea#thought-input{width:100%;min-height:180px;background:transparent;border:none;outline:none;resize:none;font-family:'Special Elite',monospace;font-size:1.05rem;color:var(--soft-ink);line-height:2;caret-color:var(--chocolate);background-image:repeating-linear-gradient(transparent,transparent 31px,rgba(201,168,76,.09) 31px,rgba(201,168,76,.09) 32px);background-attachment:local;}
 textarea#thought-input::placeholder{color:rgba(107,66,38,.27);font-style:italic;font-family:'Playfair Display',serif;}
-
-/* PHOTO UPLOAD AREA */
 .photo-area{margin-top:1rem;border-top:1px dashed rgba(107,66,38,.11);padding-top:.9rem;}
 .photo-strip{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.6rem;}
 .photo-thumb{width:72px;height:72px;border-radius:8px;object-fit:cover;border:1px solid rgba(107,66,38,.15);cursor:pointer;transition:transform .15s;}
@@ -50,23 +42,18 @@ textarea#thought-input::placeholder{color:rgba(107,66,38,.27);font-style:italic;
 .photo-add-btn{width:72px;height:72px;border-radius:8px;border:1px dashed rgba(107,66,38,.25);background:rgba(107,66,38,.04);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--warm-brown);opacity:.6;transition:opacity .2s;font-family:'Special Elite',monospace;font-size:.55rem;letter-spacing:.05em;}
 .photo-add-btn:hover{opacity:1;}
 .photo-add-btn svg{width:18px;height:18px;}
-
 .writing-footer{display:flex;justify-content:flex-end;align-items:center;margin-top:1rem;padding-top:.9rem;border-top:1px dashed rgba(107,66,38,.11);}
 .btn-send{font-family:'Special Elite',monospace;font-size:.8rem;letter-spacing:.12em;background:var(--chocolate);color:var(--cream);border:none;padding:.55rem 1.65rem;border-radius:40px;cursor:pointer;transition:all .22s;}
 .btn-send:hover{background:var(--warm-brown);transform:translateY(-1px);box-shadow:0 5px 16px rgba(107,66,38,.26);}
-
-/* ANALYSIS */
 .analysis-card{background:rgba(255,255,255,.68);border:1px solid rgba(201,168,76,.17);border-radius:16px;padding:1.7rem;margin:1.5rem 0;display:none;backdrop-filter:blur(8px);animation:cardReveal .45s ease;}
 .analysis-card.visible{display:block;}
 @keyframes cardReveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .thought-tag{display:inline-flex;align-items:center;gap:.4rem;padding:.27rem .9rem;border-radius:40px;font-size:.8rem;font-family:'Caveat',cursive;font-weight:600;margin-bottom:.7rem;}
 .resonance-title{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem;letter-spacing:.06em;color:var(--warm-brown);opacity:.6;margin-bottom:.6rem;}
 .analysis-text{font-family:'Playfair Display',serif;font-size:.97rem;line-height:1.78;color:var(--soft-ink);}
-
-/* JOURNAL */
 .journal-section{margin-top:3rem;}
 .section-title{font-family:'Special Elite',monospace;font-size:.76rem;letter-spacing:.22em;color:var(--warm-brown);text-transform:uppercase;text-align:center;margin-bottom:1.8rem;opacity:.65;}
-.journal-entry{background:rgba(255,255,255,.44);border-radius:12px;padding:1.1rem 1.3rem 1.1rem 1.3rem;margin-bottom:1rem;backdrop-filter:blur(4px);transition:all .2s;cursor:pointer;position:relative;border:1px solid rgba(201,168,76,.1);display:flex;gap:1rem;align-items:flex-start;}
+.journal-entry{background:rgba(255,255,255,.44);border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:1rem;backdrop-filter:blur(4px);transition:all .2s;cursor:pointer;position:relative;border:1px solid rgba(201,168,76,.1);display:flex;gap:1rem;align-items:flex-start;}
 .journal-entry:hover{background:rgba(255,255,255,.72);transform:translateY(-1px);box-shadow:0 4px 14px rgba(107,66,38,.07);}
 .entry-seal-col{flex-shrink:0;width:52px;display:flex;align-items:center;justify-content:center;}
 .entry-content{flex:1;min-width:0;}
@@ -81,8 +68,6 @@ textarea#thought-input::placeholder{color:rgba(107,66,38,.27);font-style:italic;
 .action-btn{font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;background:none;border:1px solid rgba(107,66,38,.18);border-radius:20px;padding:.18rem .6rem;color:var(--warm-brown);cursor:pointer;transition:all .15s;}
 .action-btn:hover{background:rgba(107,66,38,.07);}
 .action-btn.del:hover{background:rgba(139,58,58,.08);border-color:rgba(139,58,58,.25);color:#8B3A3A;}
-
-/* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(61,43,31,.38);backdrop-filter:blur(6px);z-index:2000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
 .modal-overlay.visible{display:flex;}
 .modal-card{background:var(--cream);border-radius:20px;padding:2.5rem;max-width:600px;width:100%;max-height:88vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(61,43,31,.2);animation:modalIn .35s ease;}
@@ -98,8 +83,6 @@ textarea#thought-input::placeholder{color:rgba(107,66,38,.27);font-style:italic;
 .modal-photo{max-width:100%;border-radius:10px;object-fit:cover;border:1px solid rgba(107,66,38,.1);cursor:pointer;}
 .modal-photo-small{width:100px;height:100px;object-fit:cover;}
 .modal-photo-full{max-width:100%;max-height:400px;border-radius:10px;}
-
-/* EDIT MODAL */
 .edit-modal-overlay{position:fixed;inset:0;background:rgba(61,43,31,.38);backdrop-filter:blur(6px);z-index:3000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
 .edit-modal-overlay.visible{display:flex;}
 .edit-modal-card{background:var(--cream);border-radius:20px;padding:2rem;max-width:580px;width:100%;max-height:88vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(61,43,31,.2);animation:modalIn .3s ease;}
@@ -109,8 +92,6 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 .edit-footer{display:flex;gap:.6rem;justify-content:flex-end;}
 .btn-cancel{font-family:'Special Elite',monospace;font-size:.78rem;letter-spacing:.1em;background:none;border:1px solid rgba(107,66,38,.2);color:var(--warm-brown);padding:.5rem 1.2rem;border-radius:40px;cursor:pointer;}
 .btn-save{font-family:'Special Elite',monospace;font-size:.78rem;letter-spacing:.1em;background:var(--chocolate);color:var(--cream);border:none;padding:.5rem 1.4rem;border-radius:40px;cursor:pointer;}
-
-/* CONFIRM DELETE */
 .confirm-overlay{position:fixed;inset:0;background:rgba(61,43,31,.38);backdrop-filter:blur(6px);z-index:4000;display:none;align-items:center;justify-content:center;padding:1.5rem;}
 .confirm-overlay.visible{display:flex;}
 .confirm-card{background:var(--cream);border-radius:16px;padding:1.8rem;max-width:340px;width:100%;text-align:center;box-shadow:0 16px 40px rgba(61,43,31,.18);animation:modalIn .3s ease;}
@@ -119,13 +100,9 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 .confirm-btns{display:flex;gap:.6rem;justify-content:center;}
 .btn-keep{font-family:'Special Elite',monospace;font-size:.75rem;background:none;border:1px solid rgba(107,66,38,.2);color:var(--warm-brown);padding:.5rem 1.2rem;border-radius:40px;cursor:pointer;}
 .btn-del-confirm{font-family:'Special Elite',monospace;font-size:.75rem;background:#8B3A3A;color:var(--cream);border:none;padding:.5rem 1.2rem;border-radius:40px;cursor:pointer;}
-
-/* PHOTO LIGHTBOX */
 .lightbox{position:fixed;inset:0;background:rgba(61,43,31,.82);z-index:5000;display:none;align-items:center;justify-content:center;cursor:pointer;}
 .lightbox.visible{display:flex;}
 .lightbox img{max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;}
-
-/* WHIMSY BOT */
 .whimsy-bot{position:fixed;bottom:2rem;right:2rem;z-index:1000;}
 .bot-bubble{background:rgba(255,255,255,.95);border:1px solid rgba(201,168,76,.26);border-radius:20px 20px 4px 20px;padding:1.1rem 1.25rem;max-width:295px;min-width:220px;box-shadow:0 8px 26px rgba(107,66,38,.1);margin-bottom:.75rem;display:none;backdrop-filter:blur(12px);animation:bubbleIn .3s ease;}
 .bot-bubble.visible{display:block;}
@@ -143,8 +120,6 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 .whimsy-idea-item{font-family:'Caveat',cursive;font-size:.9rem;color:var(--soft-ink);line-height:1.55;padding:.45rem 0;border-bottom:1px dashed rgba(107,66,38,.09);display:flex;gap:.55rem;align-items:flex-start;}
 .whimsy-idea-item:last-child{border-bottom:none;}
 .idea-dot{width:5px;height:5px;border-radius:50%;background:var(--dusty-rose);margin-top:8px;flex-shrink:0;}
-
-/* LOADING */
 .loading-overlay{position:fixed;inset:0;background:rgba(253,246,236,.82);z-index:10000;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1rem;backdrop-filter:blur(4px);}
 .loading-overlay.active{display:flex;}
 .loading-text{font-family:'Playfair Display',serif;font-style:italic;font-size:1.02rem;color:var(--warm-brown);animation:loadPulse 1.5s ease-in-out infinite;}
@@ -159,7 +134,6 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 <canvas id="glitter-canvas"></canvas>
 <div class="page-bg"></div>
 
-<!-- Floating decorations -->
 <svg class="float-deco" style="top:6%;left:3%;width:42px;height:42px;animation:f1 9s ease-in-out infinite;" viewBox="0 0 42 42"><path d="M21 5 C30 9 38 20 34 32 C28 40 14 40 8 32 C4 20 12 9 21 5Z" fill="#C4D9C8"/><path d="M21 5 L21 39" stroke="#8B5E3C" stroke-width=".8" fill="none" opacity=".35"/><path d="M21 14 L15 22 M21 22 L13 28 M21 14 L27 22 M21 22 L29 28" stroke="#8B5E3C" stroke-width=".5" fill="none" opacity=".28"/></svg>
 <svg class="float-deco" style="top:13%;right:5%;width:26px;height:52px;animation:f2 11s ease-in-out infinite;" viewBox="0 0 26 55"><path d="M13 52 C13 52 1 32 4 10 C7 2 19 2 22 10 C25 32 13 52 13 52Z" fill="#E2D9F3"/><line x1="13" y1="52" x2="13" y2="8" stroke="#8B5E3C" stroke-width=".75" opacity=".3"/></svg>
 <svg class="float-deco" style="top:40%;left:1.5%;width:38px;height:38px;animation:f3 10s ease-in-out infinite;" viewBox="0 0 38 38"><ellipse cx="19" cy="10" rx="4.5" ry="8" fill="#F2D4CE"/><ellipse cx="19" cy="28" rx="4.5" ry="8" fill="#F2D4CE"/><ellipse cx="10" cy="19" rx="8" ry="4.5" fill="#F2D4CE"/><ellipse cx="28" cy="19" rx="8" ry="4.5" fill="#F2D4CE"/><circle cx="19" cy="19" r="5.5" fill="#FFF0C4"/><circle cx="19" cy="19" r="3" fill="#C9A84C" opacity=".45"/></svg>
@@ -169,9 +143,8 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 <svg class="float-deco" style="top:52%;right:1.5%;width:34px;height:40px;animation:f3 12s ease-in-out infinite;" viewBox="0 0 34 44"><rect x="13" y="24" width="8" height="16" rx="3" fill="#E8C4C0"/><ellipse cx="17" cy="22" rx="15" ry="11" fill="#E8B4B8"/><circle cx="10" cy="17" r="3.2" fill="rgba(255,255,255,.48)"/><circle cx="21" cy="14" r="2.6" fill="rgba(255,255,255,.48)"/></svg>
 <svg class="float-deco" style="top:73%;left:7%;width:32px;height:24px;animation:f1 9.5s ease-in-out infinite;" viewBox="0 0 34 26"><path d="M17 13 C14 8 6 4 4 8 C2 12 8 18 17 13Z" fill="#C8D4F0"/><path d="M17 13 C20 8 28 4 30 8 C32 12 26 18 17 13Z" fill="#C8D4F0"/><ellipse cx="17" cy="13" rx="1.5" ry="5" fill="#8B5E3C" opacity=".3"/></svg>
 
-<!-- Modals -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal-card" id="modal-card">
+  <div class="modal-card">
     <button class="modal-close" onclick="closeModalDirect()">close ✦</button>
     <div class="modal-seal-center" id="modal-seal"></div>
     <div id="modal-type-tag"></div>
@@ -253,7 +226,7 @@ textarea#edit-input:focus{border-color:rgba(107,66,38,.35);}
 
   <div class="journal-section">
     <div class="section-title">— the archive —</div>
-    <div id="journal-entries"><div class="empty-journal">nothing here yet... write your first thought above</div></div>
+    <div id="journal-entries"><div class="empty-journal">loading your thoughts...</div></div>
   </div>
 </div>
 
@@ -285,156 +258,45 @@ document.addEventListener('click',e=>{for(let i=0;i<18;i++)particles.push(new Sp
 function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);particles=particles.filter(p=>p.life>0);particles.forEach(p=>{p.update();p.draw();});requestAnimationFrame(loop);}
 loop();
 
-// ======== WAX SEALS — realistic SVG based on real seal designs ========
-// Colors inspired by real wax: deep reds, forest green, navy, bronze, burgundy, dusty blue, moss
-const sealDefs = [
-  // 1. Rose — lush petals, red wax
-  {color:'#8B2020',light:'#C04040',shadow:'#5A1010',label:'rose',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="42%" cy="35%" r="58%"><stop offset="0%" stop-color="#C04040"/><stop offset="60%" stop-color="#8B2020"/><stop offset="100%" stop-color="#5A1010"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.2" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#5A1010" stroke-width="1.5" opacity=".5"/>
-    <circle cx="50" cy="50" r="41" fill="none" stroke="rgba(255,255,255,.08)" stroke-width=".8"/>
-    <g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1" filter="url(#wf${id})">
-      <ellipse cx="50" cy="50" rx="8" ry="6"/><ellipse cx="50" cy="50" rx="14" ry="10" transform="rotate(20 50 50)"/><ellipse cx="50" cy="50" rx="19" ry="13" transform="rotate(40 50 50)"/><ellipse cx="50" cy="50" rx="24" ry="16" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="28" ry="18" transform="rotate(80 50 50)"/>
-    </g>
-    <circle cx="38" cy="32" r="5" fill="rgba(255,255,255,.06)"/>
-  `},
-  // 2. Leaf/botanica — forest green
-  {color:'#2D5A2D',light:'#4A8A4A',shadow:'#1A3A1A',label:'leaf',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#4A8A4A"/><stop offset="55%" stop-color="#2D5A2D"/><stop offset="100%" stop-color="#1A3A1A"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#1A3A1A" stroke-width="1.5" opacity=".5"/>
-    <g fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.2" filter="url(#wf${id})">
-      <path d="M50 22 C64 30 68 46 58 60 C52 68 48 68 42 60 C32 46 36 30 50 22Z"/>
-      <line x1="50" y1="22" x2="50" y2="70"/>
-      <line x1="50" y1="36" x2="42" y2="44"/><line x1="50" y1="36" x2="58" y2="44"/>
-      <line x1="50" y1="46" x2="40" y2="54"/><line x1="50" y1="46" x2="60" y2="54"/>
-    </g>
-    <circle cx="37" cy="30" r="5" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 3. Snowflake — icy blue-silver
-  {color:'#2A4A7A',light:'#4A7ABF',shadow:'#152440',label:'snowflake',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="40%" cy="33%" r="60%"><stop offset="0%" stop-color="#6090D0"/><stop offset="55%" stop-color="#2A4A7A"/><stop offset="100%" stop-color="#152440"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#152440" stroke-width="1.5" opacity=".4"/>
-    <g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.2" stroke-linecap="round" filter="url(#wf${id})">
-      <line x1="50" y1="18" x2="50" y2="82"/><line x1="18" y1="50" x2="82" y2="50"/>
-      <line x1="27" y1="27" x2="73" y2="73"/><line x1="73" y1="27" x2="27" y2="73"/>
-      <line x1="44" y1="18" x2="50" y2="26"/><line x1="56" y1="18" x2="50" y2="26"/>
-      <line x1="44" y1="82" x2="50" y2="74"/><line x1="56" y1="82" x2="50" y2="74"/>
-      <line x1="18" y1="44" x2="26" y2="50"/><line x1="18" y1="56" x2="26" y2="50"/>
-      <line x1="82" y1="44" x2="74" y2="50"/><line x1="82" y1="56" x2="74" y2="50"/>
-    </g>
-    <circle cx="50" cy="50" r="6" fill="rgba(255,255,255,.2)"/>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.08)"/>
-  `},
-  // 4. Moon & star — midnight navy/indigo
-  {color:'#1E1E50',light:'#3838A0',shadow:'#0C0C28',label:'moon',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#4848B8"/><stop offset="55%" stop-color="#1E1E50"/><stop offset="100%" stop-color="#0C0C28"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#0C0C28" stroke-width="1.5" opacity=".5"/>
-    <g fill="rgba(255,255,255,.22)" filter="url(#wf${id})">
-      <path d="M52 24 A16 16 0 1 0 52 58 A10 10 0 1 1 52 24Z"/>
-      <polygon points="65,28 66.5,33 72,33 67.5,36 69,41 65,38 61,41 62.5,36 58,33 63.5,33"/>
-    </g>
-    <circle cx="33" cy="28" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 5. Sunflower — golden amber
-  {color:'#7A5010',light:'#C8901A',shadow:'#4A3008',label:'sunflower',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#D4A030"/><stop offset="55%" stop-color="#8A6010"/><stop offset="100%" stop-color="#4A3008"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#4A3008" stroke-width="1.5" opacity=".4"/>
-    <g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.3" filter="url(#wf${id})">
-      ${Array.from({length:12},(_,i)=>{const a=i*30*Math.PI/180,r1=18,r2=30;return `<line x1="${50+r1*Math.cos(a)}" y1="${50+r1*Math.sin(a)}" x2="${50+r2*Math.cos(a)}" y2="${50+r2*Math.sin(a)}"/>`;}).join('')}
-    </g>
-    <circle cx="50" cy="50" r="14" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/>
-    <circle cx="50" cy="50" r="8" fill="rgba(255,255,255,.12)"/>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 6. Butterfly — warm burgundy
-  {color:'#6A1A3A',light:'#A0305A',shadow:'#3A0C1E',label:'butterfly',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#B03060"/><stop offset="55%" stop-color="#6A1A3A"/><stop offset="100%" stop-color="#3A0C1E"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#3A0C1E" stroke-width="1.5" opacity=".5"/>
-    <g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.2" filter="url(#wf${id})">
-      <path d="M50 50 C44 38 28 32 26 44 C24 54 36 62 50 50Z"/>
-      <path d="M50 50 C56 38 72 32 74 44 C76 54 64 62 50 50Z"/>
-      <path d="M50 50 C44 56 30 58 28 68 C26 76 38 78 50 68Z"/>
-      <path d="M50 50 C56 56 70 58 72 68 C74 76 62 78 50 68Z"/>
-      <line x1="50" y1="34" x2="50" y2="75"/>
-    </g>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 7. Compass rose — bronze/copper
-  {color:'#6A4020',light:'#A06030',shadow:'#3A2010',label:'compass',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#B07040"/><stop offset="55%" stop-color="#6A4020"/><stop offset="100%" stop-color="#3A2010"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#3A2010" stroke-width="1.5" opacity=".45"/>
-    <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,.15)" stroke-width=".8"/>
-    <g fill="rgba(255,255,255,.22)" filter="url(#wf${id})">
-      <polygon points="50,20 53,46 50,50 47,46"/><polygon points="50,80 53,54 50,50 47,54"/>
-      <polygon points="20,50 46,47 50,50 46,53"/><polygon points="80,50 54,47 50,50 54,53"/>
-      <polygon points="29,29 46,46 50,50 46,46" opacity=".6"/><polygon points="71,29 54,46 50,50 54,46" opacity=".6"/>
-      <polygon points="29,71 46,54 50,50 46,54" opacity=".6"/><polygon points="71,71 54,54 50,50 54,54" opacity=".6"/>
-    </g>
-    <circle cx="50" cy="50" r="5" fill="rgba(255,255,255,.25)"/>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 8. Floral wreath — sage green
-  {color:'#3A5A30',light:'#5A8A48',shadow:'#1E3018',label:'wreath',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#6A9A58"/><stop offset="55%" stop-color="#3A5A30"/><stop offset="100%" stop-color="#1E3018"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#1E3018" stroke-width="1.5" opacity=".45"/>
-    <g fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.1" filter="url(#wf${id})">
-      <circle cx="50" cy="50" r="24"/>
-      ${Array.from({length:8},(_,i)=>{const a=i*45*Math.PI/180;const cx=50+24*Math.cos(a),cy=50+24*Math.sin(a);return `<ellipse cx="${cx}" cy="${cy}" rx="5" ry="8" transform="rotate(${i*45} ${cx} ${cy})"/>`;}).join('')}
-    </g>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
-  // 9. Heart — deep red
-  {color:'#7A1820',light:'#B03030',shadow:'#400810',label:'heart',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#C03030"/><stop offset="55%" stop-color="#7A1820"/><stop offset="100%" stop-color="#400810"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.2"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#400810" stroke-width="1.5" opacity=".45"/>
-    <g fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.4" stroke-linejoin="round" filter="url(#wf${id})">
-      <path d="M50 66 C50 66 26 52 26 38 C26 30 32 24 38 24 C44 24 50 30 50 30 C50 30 56 24 62 24 C68 24 74 30 74 38 C74 52 50 66 50 66Z"/>
-    </g>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.08)"/>
-  `},
-  // 10. Key — dusty lavender
-  {color:'#503070',light:'#7850A8',shadow:'#281838',label:'key',draw:(id)=>`
-    <defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#9068C0"/><stop offset="55%" stop-color="#503070"/><stop offset="100%" stop-color="#281838"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs>
-    <circle cx="50" cy="50" r="46" fill="url(#wg${id})"/>
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#281838" stroke-width="1.5" opacity=".45"/>
-    <g fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.3" stroke-linecap="round" filter="url(#wf${id})">
-      <circle cx="44" cy="38" r="10"/>
-      <line x1="44" y1="48" x2="44" y2="72"/>
-      <line x1="44" y1="60" x2="50" y2="60"/><line x1="44" y1="66" x2="52" y2="66"/>
-    </g>
-    <circle cx="37" cy="30" r="4" fill="rgba(255,255,255,.07)"/>
-  `},
+// ======== WAX SEALS ========
+const sealDefs=[
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="42%" cy="35%" r="58%"><stop offset="0%" stop-color="#C04040"/><stop offset="60%" stop-color="#8B2020"/><stop offset="100%" stop-color="#5A1010"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.2"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#5A1010" stroke-width="1.5" opacity=".5"/><g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1" filter="url(#wf${id})"><ellipse cx="50" cy="50" rx="8" ry="6"/><ellipse cx="50" cy="50" rx="14" ry="10" transform="rotate(20 50 50)"/><ellipse cx="50" cy="50" rx="19" ry="13" transform="rotate(40 50 50)"/><ellipse cx="50" cy="50" rx="24" ry="16" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="28" ry="18" transform="rotate(80 50 50)"/></g><circle cx="38" cy="32" r="5" fill="rgba(255,255,255,.06)"/>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#4A8A4A"/><stop offset="55%" stop-color="#2D5A2D"/><stop offset="100%" stop-color="#1A3A1A"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#1A3A1A" stroke-width="1.5" opacity=".5"/><g fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.2" filter="url(#wf${id})"><path d="M50 22 C64 30 68 46 58 60 C52 68 48 68 42 60 C32 46 36 30 50 22Z"/><line x1="50" y1="22" x2="50" y2="70"/><line x1="50" y1="36" x2="42" y2="44"/><line x1="50" y1="36" x2="58" y2="44"/><line x1="50" y1="46" x2="40" y2="54"/><line x1="50" y1="46" x2="60" y2="54"/></g>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="40%" cy="33%" r="60%"><stop offset="0%" stop-color="#6090D0"/><stop offset="55%" stop-color="#2A4A7A"/><stop offset="100%" stop-color="#152440"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#152440" stroke-width="1.5" opacity=".4"/><g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.2" stroke-linecap="round" filter="url(#wf${id})"><line x1="50" y1="18" x2="50" y2="82"/><line x1="18" y1="50" x2="82" y2="50"/><line x1="27" y1="27" x2="73" y2="73"/><line x1="73" y1="27" x2="27" y2="73"/><line x1="44" y1="18" x2="50" y2="26"/><line x1="56" y1="18" x2="50" y2="26"/><line x1="44" y1="82" x2="50" y2="74"/><line x1="56" y1="82" x2="50" y2="74"/></g><circle cx="50" cy="50" r="6" fill="rgba(255,255,255,.2)"/>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#4848B8"/><stop offset="55%" stop-color="#1E1E50"/><stop offset="100%" stop-color="#0C0C28"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#0C0C28" stroke-width="1.5" opacity=".5"/><g fill="rgba(255,255,255,.22)" filter="url(#wf${id})"><path d="M52 24 A16 16 0 1 0 52 58 A10 10 0 1 1 52 24Z"/><polygon points="65,28 66.5,33 72,33 67.5,36 69,41 65,38 61,41 62.5,36 58,33 63.5,33"/></g>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#D4A030"/><stop offset="55%" stop-color="#8A6010"/><stop offset="100%" stop-color="#4A3008"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#4A3008" stroke-width="1.5" opacity=".4"/><g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.3" filter="url(#wf${id})">${Array.from({length:12},(_,i)=>{const a=i*30*Math.PI/180;return `<line x1="${50+18*Math.cos(a)}" y1="${50+18*Math.sin(a)}" x2="${50+30*Math.cos(a)}" y2="${50+30*Math.sin(a)}"/>`;}).join('')}</g><circle cx="50" cy="50" r="14" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/><circle cx="50" cy="50" r="8" fill="rgba(255,255,255,.12)"/>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#B03060"/><stop offset="55%" stop-color="#6A1A3A"/><stop offset="100%" stop-color="#3A0C1E"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#3A0C1E" stroke-width="1.5" opacity=".5"/><g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.2" filter="url(#wf${id})"><path d="M50 50 C44 38 28 32 26 44 C24 54 36 62 50 50Z"/><path d="M50 50 C56 38 72 32 74 44 C76 54 64 62 50 50Z"/><path d="M50 50 C44 56 30 58 28 68 C26 76 38 78 50 68Z"/><path d="M50 50 C56 56 70 58 72 68 C74 76 62 78 50 68Z"/><line x1="50" y1="34" x2="50" y2="75"/></g>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#B07040"/><stop offset="55%" stop-color="#6A4020"/><stop offset="100%" stop-color="#3A2010"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#3A2010" stroke-width="1.5" opacity=".45"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,.15)" stroke-width=".8"/><g fill="rgba(255,255,255,.22)" filter="url(#wf${id})"><polygon points="50,20 53,46 50,50 47,46"/><polygon points="50,80 53,54 50,50 47,54"/><polygon points="20,50 46,47 50,50 46,53"/><polygon points="80,50 54,47 50,50 54,53"/></g><circle cx="50" cy="50" r="5" fill="rgba(255,255,255,.25)"/>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#6A9A58"/><stop offset="55%" stop-color="#3A5A30"/><stop offset="100%" stop-color="#1E3018"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#1E3018" stroke-width="1.5" opacity=".45"/><g fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.1" filter="url(#wf${id})"><circle cx="50" cy="50" r="24"/>${Array.from({length:8},(_,i)=>{const a=i*45*Math.PI/180,cx=50+24*Math.cos(a),cy=50+24*Math.sin(a);return `<ellipse cx="${cx}" cy="${cy}" rx="5" ry="8" transform="rotate(${i*45} ${cx} ${cy})"/>`;}).join('')}</g>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#C03030"/><stop offset="55%" stop-color="#7A1820"/><stop offset="100%" stop-color="#400810"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1.2"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#400810" stroke-width="1.5" opacity=".45"/><g fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.4" stroke-linejoin="round" filter="url(#wf${id})"><path d="M50 66 C50 66 26 52 26 38 C26 30 32 24 38 24 C44 24 50 30 50 30 C50 30 56 24 62 24 C68 24 74 30 74 38 C74 52 50 66 50 66Z"/></g>`},
+  {draw:(id)=>`<defs><radialGradient id="wg${id}" cx="38%" cy="32%" r="62%"><stop offset="0%" stop-color="#9068C0"/><stop offset="55%" stop-color="#503070"/><stop offset="100%" stop-color="#281838"/></radialGradient><filter id="wf${id}"><feGaussianBlur stdDeviation="1"/></filter></defs><circle cx="50" cy="50" r="46" fill="url(#wg${id})"/><circle cx="50" cy="50" r="44" fill="none" stroke="#281838" stroke-width="1.5" opacity=".45"/><g fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.3" stroke-linecap="round" filter="url(#wf${id})"><circle cx="44" cy="38" r="10"/><line x1="44" y1="48" x2="44" y2="72"/><line x1="44" y1="60" x2="50" y2="60"/><line x1="44" y1="66" x2="52" y2="66"/></g>`},
 ];
+function randomSealSVG(){const def=sealDefs[Math.floor(Math.random()*sealDefs.length)];const id='s'+Math.random().toString(36).substr(2,6);return `<svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 3px 8px rgba(0,0,0,.35)) drop-shadow(0 1px 2px rgba(0,0,0,.2))">${def.draw(id)}</svg>`;}
+function smallSealSVG(s){return s?s.replace('width="90" height="90"','width="52" height="52"'):'';}
 
-function randomSealSVG(){
-  const def=sealDefs[Math.floor(Math.random()*sealDefs.length)];
-  const id='s'+Math.random().toString(36).substr(2,6);
-  return `<svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 3px 8px rgba(0,0,0,.35)) drop-shadow(0 1px 2px rgba(0,0,0,.2))">${def.draw(id)}</svg>`;
-}
-function smallSealSVG(sealSvg){
-  // scale down existing seal for journal list
-  return sealSvg ? sealSvg.replace('width="90" height="90"','width="52" height="52"') : '';
-}
+// ======== DATE ========
+function nowDate(){return new Date().toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});}
 
-// ======== DATE (device timezone) ========
-function nowDate(){
-  const d=new Date();
-  return d.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
-}
-
-// ======== JOURNAL ========
+// ======== JOURNAL — server storage ========
 let journal=[];
-try{journal=JSON.parse(localStorage.getItem('cs_j5')||'[]');}catch(e){}
-function saveJ(){try{localStorage.setItem('cs_j5',JSON.stringify(journal));}catch(e){}}
+
+async function loadJournal(){
+  try{
+    const resp=await fetch('/.netlify/functions/get-entries');
+    journal=await resp.json();
+  }catch(e){journal=[];}
+  renderJournal();
+}
+
+async function saveJ(){
+  try{
+    await fetch('/.netlify/functions/save-entries',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(journal)
+    });
+  }catch(e){console.error('save failed',e);}
+}
 
 function renderJournal(){
   const el=document.getElementById('journal-entries');
@@ -459,80 +321,53 @@ function renderJournal(){
     </div>`;
   }).join('');
 }
-renderJournal();
 
-// ======== OPEN ENTRY MODAL ========
-let currentEntryIdx=null;
+loadJournal();
+
+// ======== MODALS ========
 function openEntry(idx,ev){
   if(ev&&(ev.target.classList.contains('action-btn')||ev.target.classList.contains('entry-photo-thumb')))return;
-  currentEntryIdx=idx;
   const e=journal[idx];
   document.getElementById('modal-seal').innerHTML=e.sealSvg||'';
   document.getElementById('modal-type-tag').innerHTML=`<span class="modal-type-tag" style="background:${e.tagBg};color:${e.tagColor}">${e.typeEmoji} ${e.typeName}</span>`;
   document.getElementById('modal-resonance').textContent=`"${e.resonance||''}"`;
   document.getElementById('modal-date').textContent=e.date;
   document.getElementById('modal-body').textContent=e.text;
-  const ph=document.getElementById('modal-photos');
-  ph.innerHTML='';
-  if(e.photos&&e.photos.length){
-    e.photos.forEach(p=>{const img=document.createElement('img');img.src=p;img.className='modal-photo '+(e.photos.length>1?'modal-photo-small':'modal-photo-full');img.onclick=()=>openLightbox(p);ph.appendChild(img);});
-  }
-  document.getElementById('modal-overlay').classList.add('visible');
-  document.body.style.overflow='hidden';
+  const ph=document.getElementById('modal-photos');ph.innerHTML='';
+  if(e.photos&&e.photos.length){e.photos.forEach(p=>{const img=document.createElement('img');img.src=p;img.className='modal-photo '+(e.photos.length>1?'modal-photo-small':'modal-photo-full');img.onclick=()=>openLightbox(p);ph.appendChild(img);});}
+  document.getElementById('modal-overlay').classList.add('visible');document.body.style.overflow='hidden';
 }
 function closeModal(ev){if(ev.target===document.getElementById('modal-overlay'))closeModalDirect();}
 function closeModalDirect(){document.getElementById('modal-overlay').classList.remove('visible');document.body.style.overflow='';}
 
-// ======== EDIT ========
 let editIdx=null;
-function openEdit(idx,ev){
-  ev&&ev.stopPropagation();
-  editIdx=idx;
-  document.getElementById('edit-input').value=journal[idx].text;
-  document.getElementById('edit-overlay').classList.add('visible');
-  document.body.style.overflow='hidden';
-}
+function openEdit(idx,ev){ev&&ev.stopPropagation();editIdx=idx;document.getElementById('edit-input').value=journal[idx].text;document.getElementById('edit-overlay').classList.add('visible');document.body.style.overflow='hidden';}
 function closeEditModal(ev){if(ev.target===document.getElementById('edit-overlay'))closeEditDirect();}
 function closeEditDirect(){document.getElementById('edit-overlay').classList.remove('visible');document.body.style.overflow='';}
-function saveEdit(){
+async function saveEdit(){
   if(editIdx===null)return;
   journal[editIdx].text=document.getElementById('edit-input').value.trim()||journal[editIdx].text;
-  saveJ();renderJournal();closeEditDirect();
+  await saveJ();renderJournal();closeEditDirect();
 }
 
-// ======== DELETE ========
 let deleteIdx=null;
 function openConfirm(idx,ev){ev&&ev.stopPropagation();deleteIdx=idx;document.getElementById('confirm-overlay').classList.add('visible');}
 function closeConfirm(){document.getElementById('confirm-overlay').classList.remove('visible');deleteIdx=null;}
-function confirmDelete(){if(deleteIdx===null)return;journal.splice(deleteIdx,1);saveJ();renderJournal();closeConfirm();}
+async function confirmDelete(){if(deleteIdx===null)return;journal.splice(deleteIdx,1);await saveJ();renderJournal();closeConfirm();}
 
-// ======== LIGHTBOX ========
 function openLightbox(src,ev){ev&&ev.stopPropagation();document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('visible');}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('visible');}
 
-// ======== PHOTO UPLOAD ========
+// ======== PHOTOS ========
 let pendingPhotos=[];
 function handlePhotos(ev){
-  const files=Array.from(ev.target.files);
-  files.forEach(f=>{
-    const reader=new FileReader();
-    reader.onload=e=>{
-      pendingPhotos.push(e.target.result);
-      renderPhotoStrip();
-    };
-    reader.readAsDataURL(f);
-  });
+  Array.from(ev.target.files).forEach(f=>{const reader=new FileReader();reader.onload=e=>{pendingPhotos.push(e.target.result);renderPhotoStrip();};reader.readAsDataURL(f);});
   ev.target.value='';
 }
 function renderPhotoStrip(){
   const strip=document.getElementById('photo-strip');
-  // clear existing thumbs (keep add btn)
   strip.querySelectorAll('.photo-thumb-wrap').forEach(n=>n.remove());
-  pendingPhotos.forEach((src,i)=>{
-    const wrap=document.createElement('div');wrap.className='photo-thumb-wrap';
-    wrap.innerHTML=`<img class="photo-thumb" src="${src}" onclick="openLightbox('${src}')"><button class="photo-remove" onclick="removePhoto(${i})">✕</button>`;
-    strip.insertBefore(wrap,strip.querySelector('.photo-add-btn'));
-  });
+  pendingPhotos.forEach((src,i)=>{const wrap=document.createElement('div');wrap.className='photo-thumb-wrap';wrap.innerHTML=`<img class="photo-thumb" src="${src}"><button class="photo-remove" onclick="removePhoto(${i})">✕</button>`;strip.insertBefore(wrap,strip.querySelector('.photo-add-btn'));});
 }
 function removePhoto(i){pendingPhotos.splice(i,1);renderPhotoStrip();}
 
@@ -570,7 +405,7 @@ async function analyzeThought(){
     document.getElementById('analysis-card').classList.add('visible');
     const seal=randomSealSVG();
     journal.push({text,typeIndex:r.typeIndex,typeName:type.name,typeEmoji:type.emoji,tagBg:type.bg,tagColor:type.color,date:nowDate(),resonance:r.resonance,reflection:r.reflection,sealSvg:seal,photos:[...pendingPhotos]});
-    saveJ();renderJournal();
+    await saveJ();renderJournal();
     document.getElementById('thought-input').value='';
     pendingPhotos=[];renderPhotoStrip();
     for(let i=0;i<28;i++)setTimeout(()=>{const b=document.querySelector('.btn-send'),rc=b.getBoundingClientRect();particles.push(new Sparkle(rc.left+Math.random()*rc.width,rc.top+Math.random()*rc.height));},i*28);
